@@ -5,10 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".DefaultFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
-
-
+   <ImageView
+       android:id="@+id/img"
+       android:layout_width="match_parent"
+       android:layout_height="323dp"
+       android:layout_alignParentStart="true"
+       android:layout_alignParentTop="true"
+       android:layout_alignParentBottom="true"
+       android:layout_marginTop="199dp"
+       android:layout_marginBottom="209dp"
+       android:gravity="center"
+       android:src="@drawable/vv" />
 
 
 </RelativeLayout>
