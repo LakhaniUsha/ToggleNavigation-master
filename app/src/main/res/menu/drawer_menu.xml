@@ -4,13 +4,9 @@
 
     <group android:checkableBehavior="single">
         <item android:id="@+id/first"
-            android:title="First Fragment"
-            android:icon="@drawable/images"/>
-        <item android:id="@+id/second"
-                android:title="Second Fragment"
-            />
-        <item android:id="@+id/third"
-            android:title="Third Fragment"/>
+            android:title="Pokemon List"
+            android:icon="@drawable/aaaaaaaaaa"/>
+
     </group>
 
 
