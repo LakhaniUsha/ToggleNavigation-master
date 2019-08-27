@@ -28,7 +28,7 @@ public class FirstFragment extends Fragment {
 
     Pokemonadapter adapter;
     ArrayList<pokemon> pokemonArray;
-
+//
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
