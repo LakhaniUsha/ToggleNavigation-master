@@ -8,12 +8,12 @@
     <fragment
         android:id="@+id/defaultFragment"
         android:name="com.test.myfirst.navigation.DefaultFragment"
-        android:label="fragment_default"
+        android:label="WelcomePokemon"
         tools:layout="@layout/fragment_default" />
     <fragment
         android:id="@+id/firstFragment"
         android:name="com.test.myfirst.navigation.FirstFragment"
-        android:label="fragment_first"
+        android:label="DATAList"
         tools:layout="@layout/fragment_first" />
     <fragment
         android:id="@+id/secondFragment"

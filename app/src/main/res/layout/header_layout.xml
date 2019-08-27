@@ -2,18 +2,40 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="120dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/appcompatTextview"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="DemoDrawer"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/poke_image"
+            android:layout_width="87dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/userlogo"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/poke_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="63dp"
+            android:text="   Pokemon"
+            android:textSize="25sp"
+            tools:ignore="RtlCompat" />
+
+
+
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
