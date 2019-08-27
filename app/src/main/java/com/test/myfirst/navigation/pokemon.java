@@ -1,9 +1,12 @@
 package com.test.myfirst.navigation;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class pokemon {
+public class pokemon implements Parcelable {
     //111111
 
     @SerializedName("name")
@@ -27,6 +30,28 @@ public class pokemon {
     @SerializedName("description")
     @Expose
     private String description;
+
+    protected pokemon(Parcel in) {
+        name = in.readString();
+        image = in.readString();
+        type = in.readString();
+        ability = in.readString();
+        height = in.readString();
+        weight = in.readString();
+        description = in.readString();
+    }
+
+    public static final Creator<pokemon> CREATOR = new Creator<pokemon>() {
+        @Override
+        public pokemon createFromParcel(Parcel in) {
+            return new pokemon(in);
+        }
+
+        @Override
+        public pokemon[] newArray(int size) {
+            return new pokemon[size];
+        }
+    };
 
     public String getName() {
         return name;
@@ -84,4 +109,19 @@ public class pokemon {
         this.description = description;
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(name);
+        parcel.writeString(image);
+        parcel.writeString(type);
+        parcel.writeString(ability);
+        parcel.writeString(height);
+        parcel.writeString(weight);
+        parcel.writeString(description);
+    }
 }

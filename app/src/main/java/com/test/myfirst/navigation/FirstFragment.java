@@ -28,6 +28,7 @@ public class FirstFragment extends Fragment {
 
     Pokemonadapter adapter;
     ArrayList<pokemon> pokemonArray;
+    public View.OnClickListener clicklistner;
 //
     @Override
     public void onAttach(@NonNull Context context) {
@@ -52,6 +53,8 @@ public class FirstFragment extends Fragment {
                 }
                 pokemonArray = new ArrayList<>(pojo.getPokemon());
                 generateData(pokemonArray);
+
+
 
             }
 
@@ -85,7 +88,9 @@ public class FirstFragment extends Fragment {
         @SuppressLint("WrongConstant") LinearLayoutManager manager = new LinearLayoutManager(getActivity().getApplicationContext(),LinearLayoutManager.VERTICAL,false);
         RecyclerView recyclerView =getView().findViewById(R.id.recycle_poke);
         recyclerView .setLayoutManager(manager);
+        adapter.setOnItemClickListner(clicklistner);
         recyclerView.setAdapter(adapter);
+
 
     }
 

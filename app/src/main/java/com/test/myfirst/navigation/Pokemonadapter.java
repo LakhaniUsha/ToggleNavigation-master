@@ -1,6 +1,7 @@
 package com.test.myfirst.navigation;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Pokemonadapter extends RecyclerView.Adapter<Pokemonadapter.Viewholder> {
@@ -69,7 +71,9 @@ public class Pokemonadapter extends RecyclerView.Adapter<Pokemonadapter.Viewhold
             poke_name = itemView.findViewById(R.id.poke_name);
 
             itemView.setTag(this);
-            itemView.setOnClickListener(pokelistner);
+           itemView.setOnClickListener(pokelistner);
+
+
         }
     }
 }
